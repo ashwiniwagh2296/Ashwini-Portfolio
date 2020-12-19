@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title></title>
+	 <link rel="stylesheet" type="text/css" href="E:\ashwini\Ashwini_Portfolio\css\stylesheet.css"">
+	
+	 
+</head>
+<body>
+
+
+<div class="background">
+
+
+<div class="nav">
+<a class="a active" href="#">Home</a>
+<a class="b" href="#">About Me</a>
+<a class="c" href="#">Gallery</a>
+<a class="d" href="#">Contact Us</a>
+
+</div>
+
+	<div class="content">
+     
+		<div class="home">
+			<h1> I am Ashwini Wagh</h1>
+			<h2> Student of MSc-II</h2>
+		</div>
+
+		<div class="aboutus">
+			<p>
+				<b>Hello Friends,</b><br><br><br>
+				I am Ashwini. I am <b>24</b> years old.I completed <b>Bsc-Maths (Feb 2019)</b>. I am studying in <b>Msc-CS part2</b>.I am from Karmaveer Bhaurao Patil College, Navi
+				Mumbai , Maharashtra. I live in <b>Diva (West)</b>.<br><br>
+
+			</p>
+			<p> My father’s name is<b> Mr. Abasaheb Wagh</b> and my mother’s name is <b>Mrs. Shobha Wagh</b>.I have one younger sister and one younger brother.</p>
+			
+		</div>
+		<div class="gallery">
+			<h1>Hello I am Gallery.</h1>
+			<div class="image">
+				<img src="images\image3.jpg" />
+			</div>
+			<div class="image">
+				<img src="images\image1.jpg" />
+			</div>
+			<div class="image">
+				<img src="images\image2.jpg" />
+			</div>
+			<div class="image">
+				<img src="images\image4.jpg" />
+			</div>
+			<div class="image">
+				<img src="images\image5.jpg" />
+			</div>
+		</div>
+
+		<div class="contactus">
+			<div class="contactform">
+				<form action="index.html" method="post">
+					<input type="text" name="" class="inputtext" value="First Name">
+					<input type="text" name="" class="inputtext" value="Last Name">
+					<input type="text" name="" class="inputtext" value="Your Email">
+					<textarea cols="4" rows="6" class="inputmessage">Your Messages...!!!</textarea>
+					<input type="button" name="" class="submitbutton" value="Submit" >
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
+	<script type="text/javascript" src="../Ashwini_Portfolio/js/jquery-1.11.3.min.js">
+
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('a').click(function () {
+				//alert("I am click");
+				var selected = $(this);
+				$('a').removeClass('active');
+				$(selected).addClass('active');
+			});
+			var $a = $('.a'),
+				$b = $('.b'),
+				$c = $('.c'),
+				$d = $('.d'),
+				$home = $('.home'),
+				$aboutus = $('.aboutus'),
+                $gallery = $('.gallery'),
+                $contactus = $('.contactus');
+
+
+			$a.click(function () {
+				$home.fadeIn();
+				$aboutus.fadeOut();
+				$gallery.fadeOut();
+                $contactus.fadeOut();
+
+			});
+			$b.click(function () {
+				$aboutus.fadeIn();
+				$home.fadeOut();
+				$gallery.fadeOut();
+                $contactus.fadeOut();
+			});
+            $c.click(function () {
+                $gallery.fadeIn();
+				$home.fadeOut();
+				$aboutus.fadeOut();
+                $contactus.fadeOut();
+			});
+            $d.click(function () {
+				$contactus.fadeIn();
+				$home.fadeOut();
+                $aboutus.fadeOut();
+                $gallery.fadeOut();
+            });
+
+		});
+	</script>
+	
+</body>
+</html>
